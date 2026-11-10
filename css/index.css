@@ -1,6 +1,6 @@
-/*----------------------|
+/*------------------------------------------|
 |  CSS Custom Properties (Theme Variables)  |
-------------------------*/
+-------------------------------------------*/
 
 :root {
   /* Dark theme (default) */
@@ -154,16 +154,17 @@ body {
   }
 }
 
-/* Animated Grid Lines Background */
+/* Animated Grid Dots Background */
 .grid-dots {
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: -1;
   background-image:
-    linear-gradient(var(--grid-color) 1px, transparent 1px),
-    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    radial-gradient(var(--grid-color) 3px, transparent 3px),
+    radial-gradient(var(--grid-color) 3px, transparent 3px);
   background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
   animation: gridMove 20s linear infinite;
   transition: background-image 0.3s ease;
 }
