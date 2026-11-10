@@ -10,13 +10,15 @@
 
 
 .h1{
-    color: rgb(0, 0, 0);
+    color: rgb(251, 251, 251);
     text-align: center;
 }
 
 
   body {
     font-family: 'Open Dyslexic', sans-serif;
+    background-color: black;
+    color: white;
   }
 
 
@@ -34,7 +36,6 @@
 /*-------------------------->
   Animations Go up for text |
 ----------------------------*/
-
 
 
 
@@ -163,4 +164,22 @@
             filter: blur(0);
     opacity: 1;
   }
+}
+
+/* Animated Grid Lines Background */
+.grid-dots {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 60px 60px;
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(60px, 60px); }
 }
