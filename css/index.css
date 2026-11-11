@@ -73,6 +73,10 @@ body {
   color: var(--text-primary);
   text-align: center;
 }
+.p1 {
+  color: var(--text-primary);
+  text-align: center;
+}
 
 /*----------------------|
 |  Animations           |
@@ -213,3 +217,44 @@ body {
 html, body, .grid-dots, .h1, #theme-toggle {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, background-image 0.3s ease;
 }
+
+
+
+
+/*------------------------------------------
+|   Fixed alighn ments text and buttion    |
+------------------------------------------*/
+ .bottom-left-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 250px; /* Adjust size as needed */
+  }
+
+   .bottom-right-fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 250px; /* Adjust size as needed */
+  }
+
+  .bottom-center-btn {
+  position: fixed;
+  bottom: 30px;          /* Distance from the bottom edge */
+  left: 50%;             /* Push the left edge to the horizontal center */
+  transform: translateX(-50%);
+  display: inline-block;
+  padding: 12px 24px;
+   background: #181818;
+   color: white;
+   text-decoration: none;
+   border-radius: 6px;
+   font-weight: bold;
+   transition: all 0.3s ease;
+   border: none;
+   cursor: pointer;
+   font-family: inherit;
+   }
+   
+
+   
