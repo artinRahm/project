@@ -238,23 +238,35 @@ html, body, .grid-dots, .h1, #theme-toggle {
     width: 250px; /* Adjust size as needed */
   }
 
-  .bottom-center-btn {
+  .bottom-center-btn-container {
   position: fixed;
-  bottom: 30px;          /* Distance from the bottom edge */
-  left: 50%;             /* Push the left edge to the horizontal center */
+  bottom: 30px;
+  left: 50%;
   transform: translateX(-50%);
+  z-index: 100;
+  pointer-events: none;
+}
+
+.bottom-center-btn {
+  position: relative;
   display: inline-block;
   padding: 12px 24px;
-   background: #181818;
-   color: white;
-   text-decoration: none;
-   border-radius: 6px;
-   font-weight: bold;
-   transition: all 0.3s ease;
-   border: none;
-   cursor: pointer;
-   font-family: inherit;
-   }
+  background: #181818;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  pointer-events: auto;
+}
+
+.bottom-center-btn:hover {
+  background: #2a2a2a;
+  transform: scale(1.05);
+}
    
 
    
